@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { getSite } from "@/content/api";
+import { ContactForm } from "@/components/sections/ContactForm";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -18,9 +19,20 @@ export function ContactCta() {
         <p className="mt-6 max-w-2xl text-muted-foreground sm:text-lg">
           {t("subtitle")}
         </p>
-        <ButtonLink href={`mailto:${site.email}`} size="lg" className="mt-10">
+        <ButtonLink
+          href={`mailto:${site.email}`}
+          size="lg"
+          variant="secondary"
+          className="mt-10"
+        >
           {site.email}
         </ButtonLink>
+        <div className="mt-14 flex w-full justify-center">
+          <ContactForm
+            email={site.email}
+            turnstileSiteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+          />
+        </div>
       </Container>
     </section>
   );

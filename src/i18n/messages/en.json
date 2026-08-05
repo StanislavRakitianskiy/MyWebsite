@@ -39,6 +39,34 @@
     "title": "Have a process that eats hours every week? Or an idea for a website?",
     "subtitle": "Describe the task in a few sentences — I'll reply within one business day with a solution option and a rough estimate."
   },
+  "form": {
+    "name": "Name",
+    "contact": "Email or Telegram",
+    "contactPlaceholder": "hello@mail.com or @nickname",
+    "message": "Task description",
+    "messagePlaceholder": "A few sentences: what process you want to automate or what website you need",
+    "budget": {
+      "label": "Budget (optional)",
+      "lt500": "under $500",
+      "b500to1500": "$500–1500",
+      "b1500to5000": "$1500–5000",
+      "gt5000": "over $5000",
+      "unknown": "not sure yet"
+    },
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "successTitle": "Request received!",
+    "successText": "I'll reply within one business day to the contact you provided.",
+    "errorText": "Sending failed. Write to {email} or on Telegram.",
+    "errors": {
+      "name": "Enter your name — at least 2 characters",
+      "contact": "Enter an email or a Telegram @nickname",
+      "message": "Describe the task — at least 20 characters",
+      "turnstile": "Please confirm you are not a bot",
+      "rateLimit": "Too many attempts. Try again in 10 minutes",
+      "send": "Sending failed"
+    }
+  },
   "footer": {
     "copyright": "© {year} {name} · {role}"
   },
