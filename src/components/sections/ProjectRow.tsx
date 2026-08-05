@@ -20,10 +20,10 @@ export function ProjectRow({ project }: { project: Project }) {
         </p>
       </div>
       <Image
-        src={project.image.src}
-        width={project.image.width}
-        height={project.image.height}
-        alt={localize(project.image.alt, locale)}
+        src={project.cover.src}
+        width={project.cover.width}
+        height={project.cover.height}
+        alt={localize(project.cover.alt, locale)}
         unoptimized
         className="h-auto w-full rounded-2xl"
       />

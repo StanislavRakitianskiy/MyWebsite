@@ -1,6 +1,6 @@
-import type { SiteConfig } from "./schema";
+import type { SiteInput } from "./schema";
 
-export const site = {
+export const siteRaw = {
   name: { uk: "Станіслав Ракітянський", en: "Stanislav Rakitianskiy" },
   role: {
     uk: "Автоматизація бізнес-процесів і веб-розробка",
@@ -29,4 +29,4 @@ export const site = {
       href: "https://t.me/",
     },
   ],
-} as const satisfies SiteConfig;
+} satisfies SiteInput;

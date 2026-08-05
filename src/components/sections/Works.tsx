@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { getProjectsByCategory } from "@/content/api";
+import { getProjects } from "@/content/api";
 import type { ProjectCategory } from "@/content/schema";
 import { ProjectRow } from "@/components/sections/ProjectRow";
 import { Container } from "@/components/ui/Container";
@@ -24,7 +24,7 @@ export function Works() {
               {t(`categories.${category}`)}
             </h3>
             <div className="divide-y divide-border">
-              {getProjectsByCategory(category).map((project) => (
+              {getProjects(category).map((project) => (
                 <ProjectRow key={project.slug} project={project} />
               ))}
             </div>

@@ -1,6 +1,6 @@
-import type { StackGroup } from "./schema";
+import type { StackGroupInput } from "./schema";
 
-export const stack = [
+export const stackRaw = [
   {
     title: { uk: "Автоматизація", en: "Automation" },
     items: [
@@ -34,4 +34,4 @@ export const stack = [
     title: { uk: "SEO", en: "SEO" },
     items: [{ uk: "Базова автоматизація", en: "Basic automation" }],
   },
-] as const satisfies readonly StackGroup[];
+] satisfies readonly StackGroupInput[];

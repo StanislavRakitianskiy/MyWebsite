@@ -6,16 +6,16 @@ import { Container } from "@/components/ui/Container";
 export function About() {
   const t = useTranslations("about");
   const strong = (chunks: ReactNode) => (
-    <strong className="font-semibold text-white">{chunks}</strong>
+    <strong className="font-semibold text-inverse-foreground">{chunks}</strong>
   );
 
   return (
     <section
       id="about"
-      className="scroll-mt-20 bg-[#0d0d0e] py-16 text-white/75 sm:py-24"
+      className="scroll-mt-20 bg-inverse-background py-16 text-inverse-foreground/75 sm:py-24"
     >
       <Container>
-        <h2 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        <h2 className="font-display text-4xl font-bold tracking-tight text-inverse-foreground sm:text-5xl">
           {t("title")}
         </h2>
         <div className="mt-12 grid gap-14 lg:grid-cols-[1fr_26rem] lg:gap-24 sm:mt-16">
@@ -23,7 +23,7 @@ export function About() {
             <p>{t("intro")}</p>
             <p>{t("believe")}</p>
             <p>{t("benefitsLead")}</p>
-            <ul className="list-disc space-y-4 pl-5 marker:text-white/40">
+            <ul className="list-disc space-y-4 pl-5 marker:text-inverse-foreground/40">
               <li>{t.rich("benefit1", { b: strong })}</li>
               <li>{t.rich("benefit2", { b: strong })}</li>
               <li>{t.rich("benefit3", { b: strong })}</li>
