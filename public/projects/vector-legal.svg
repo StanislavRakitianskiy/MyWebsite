@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#e9eaee"/>
+  <rect x="0" y="0" width="1200" height="56" fill="#d6d8de"/>
+  <circle cx="28" cy="28" r="8" fill="#b6b9c2"/>
+  <circle cx="54" cy="28" r="8" fill="#b6b9c2"/>
+  <circle cx="80" cy="28" r="8" fill="#b6b9c2"/>
+  <rect x="80" y="150" width="620" height="44" rx="8" fill="#c3c6cd"/>
+  <rect x="80" y="220" width="440" height="24" rx="6" fill="#d0d3d9"/>
+  <rect x="80" y="300" width="1040" height="360" rx="12" fill="#d9dbe1"/>
+  <text x="600" y="500" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="600" fill="#8a8e99" text-anchor="middle">Vector Legal</text>
+  <text x="600" y="548" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#a0a4ae" text-anchor="middle">1200 × 800 · placeholder</text>
+</svg>
