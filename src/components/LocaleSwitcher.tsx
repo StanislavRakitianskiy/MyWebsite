@@ -1,21 +1,21 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
-const labels: Record<(typeof routing.locales)[number], string> = {
-  uk: "UA",
-  en: "EN",
-};
-
 export function LocaleSwitcher() {
+  const t = useTranslations("common.localeSwitcher");
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
 
   return (
-    <div className="inline-flex items-center gap-1 rounded-md border border-border p-1">
+    <div
+      role="group"
+      aria-label={t("label")}
+      className="inline-flex items-center rounded-full bg-accent p-1"
+    >
       {routing.locales.map((candidate) => {
         const isActive = candidate === locale;
         return (
@@ -24,13 +24,13 @@ export function LocaleSwitcher() {
             type="button"
             aria-pressed={isActive}
             onClick={() => router.replace(pathname, { locale: candidate })}
-            className={`rounded-sm px-2 py-1 text-xs font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${
+            className={`rounded-full px-3 py-1 text-xs font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${
               isActive
-                ? "bg-accent text-accent-foreground"
-                : "text-muted-foreground hover:text-foreground"
+                ? "bg-background text-foreground"
+                : "text-accent-foreground/70 hover:text-accent-foreground"
             }`}
           >
-            {labels[candidate]}
+            {t(candidate)}
           </button>
         );
       })}

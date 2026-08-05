@@ -1,1 +1,56 @@
-{}
+{
+  "header": {
+    "name": "Stanislav RAKITIANSKIY",
+    "nav": {
+      "works": "Works",
+      "about": "About",
+      "contacts": "Contacts"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "heading": "A website brings clients. Automation turns them into deals.",
+    "subtitle": "I'm Stanislav. I set up business process automation with n8n and AI agents, and build websites — from landing pages to web apps. A lead is processed in 1 minute instead of 20, and your team gets dozens of hours back every month.",
+    "ctaWorks": "View works",
+    "ctaDiscuss": "Discuss a task"
+  },
+  "works": {
+    "title": "Works",
+    "note": "Selected projects",
+    "categories": {
+      "web": "Website development",
+      "automation": "n8n automation"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "intro": "I'm Stanislav, a business process automation specialist and fullstack developer. I work with small and medium businesses that want to grow without inflating headcount.",
+    "believe": "I believe the future belongs to automation. So I build systems where routine runs itself: an AI agent on n8n takes a request from a website or messenger, qualifies the lead, enters the data into a CRM and notifies the manager in Telegram. Within a minute. No days off, vacations or human error.",
+    "benefitsLead": "What this means for your business:",
+    "benefit1": "<b>faster replies — more deals:</b> the client gets a response while they are still “hot”, not the next morning;",
+    "benefit2": "<b>hours of routine saved every month:</b> data copying, mailouts and reports run without your involvement;",
+    "benefit3": "<b>not a single lead lost:</b> every lead is recorded, qualified and passed on.",
+    "sites": "I build websites end to end: Figma design, responsive markup, backend, deployment. From a landing page on Tilda or WordPress with basic SEO — to a web app on React/Next.js and Node.js.",
+    "solo": "I work solo, and that's your advantage: you talk directly to the person who designs, builds and ships. Fast decisions, no “broken telephone”, full responsibility for the result."
+  },
+  "cta": {
+    "eyebrow": "Available for a new project",
+    "title": "Have a process that eats hours every week? Or an idea for a website?",
+    "subtitle": "Describe the task in a few sentences — I'll reply within one business day with a solution option and a rough estimate."
+  },
+  "footer": {
+    "copyright": "© {year} {name} · {role}"
+  },
+  "common": {
+    "themeToggle": {
+      "toDark": "Switch to dark theme",
+      "toLight": "Switch to light theme"
+    },
+    "localeSwitcher": {
+      "label": "Site language",
+      "uk": "UA",
+      "en": "EN"
+    }
+  }
+}
