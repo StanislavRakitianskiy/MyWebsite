@@ -12,10 +12,14 @@ export function About() {
   return (
     <section
       id="about"
+      aria-labelledby="about-title"
       className="scroll-mt-20 bg-inverse-background py-16 text-inverse-foreground/75 sm:py-24"
     >
       <Container>
-        <h2 className="font-display text-4xl font-bold tracking-tight text-inverse-foreground sm:text-5xl">
+        <h2
+          id="about-title"
+          className="font-display text-4xl font-bold tracking-tight text-inverse-foreground sm:text-5xl"
+        >
           {t("title")}
         </h2>
         <div className="mt-12 grid gap-14 lg:grid-cols-[1fr_26rem] lg:gap-24 sm:mt-16">

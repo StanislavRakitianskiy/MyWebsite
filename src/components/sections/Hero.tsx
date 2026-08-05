@@ -8,18 +8,18 @@ export function Hero() {
   const site = getSite();
 
   return (
-    <section className="pt-16 pb-20 sm:pt-24 sm:pb-28">
+    <section className="pt-16 pb-20 sm:pt-24 sm:pb-28" aria-label={t("heading")}>
       <Container>
-        <p className="text-sm text-muted-foreground sm:text-base">
+        <p className="animate-fade-up text-sm text-muted-foreground sm:text-base">
           {site.tagline}
         </p>
-        <h1 className="mt-4 max-w-5xl font-display text-[44px]/[1.04] font-bold tracking-tight sm:text-7xl/[1.02] lg:text-[96px]/[1.0]">
+        <h1 className="animate-fade-up mt-4 max-w-5xl font-display text-[44px]/[1.04] font-bold tracking-tight sm:text-7xl/[1.02] lg:text-[96px]/[1.0] [animation-delay:60ms]">
           {t("heading")}
         </h1>
-        <p className="mt-8 max-w-2xl text-lg text-muted-foreground sm:text-xl/relaxed">
+        <p className="animate-fade-up mt-8 max-w-2xl text-lg text-muted-foreground sm:text-xl/relaxed [animation-delay:120ms]">
           {t("subtitle")}
         </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="animate-fade-up mt-10 flex flex-wrap gap-4 [animation-delay:180ms]">
           <ButtonLink href="#works">{t("ctaWorks")}</ButtonLink>
           <ButtonLink href="#contact" variant="secondary">
             {t("ctaDiscuss")}

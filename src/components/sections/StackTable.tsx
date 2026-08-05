@@ -15,7 +15,7 @@ export function StackTable() {
           <dt className="shrink-0 font-semibold text-inverse-foreground">
             {localize(group.title, locale)}
           </dt>
-          <dd className="text-right text-inverse-foreground/55">
+          <dd className="text-right text-inverse-foreground/70">
             {group.items.map((item) => localize(item, locale)).join(", ")}
           </dd>
         </div>

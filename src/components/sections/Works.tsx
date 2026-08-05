@@ -3,6 +3,7 @@ import { getProjects } from "@/content/api";
 import type { ProjectCategory } from "@/content/schema";
 import { ProjectRow } from "@/components/sections/ProjectRow";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const categories: readonly ProjectCategory[] = ["web", "automation"];
 
@@ -10,10 +11,17 @@ export function Works() {
   const t = useTranslations("works");
 
   return (
-    <section id="works" className="scroll-mt-20 border-t border-border py-16 sm:py-20">
+    <section
+      id="works"
+      aria-labelledby="works-title"
+      className="scroll-mt-20 border-t border-border py-16 sm:py-20"
+    >
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 className="font-display text-4xl font-bold tracking-tight sm:text-6xl">
+          <h2
+            id="works-title"
+            className="font-display text-4xl font-bold tracking-tight sm:text-6xl"
+          >
             {t("title")}
           </h2>
           <span className="text-sm text-muted-foreground">{t("note")}</span>
@@ -25,7 +33,9 @@ export function Works() {
             </h3>
             <div className="divide-y divide-border">
               {getProjects(category).map((project) => (
-                <ProjectRow key={project.slug} project={project} />
+                <Reveal key={project.slug}>
+                  <ProjectRow project={project} />
+                </Reveal>
               ))}
             </div>
           </div>

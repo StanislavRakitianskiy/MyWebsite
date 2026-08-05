@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Stanislav Rakitianskiy — n8n automation and websites",
+    "description": "Business process automation with n8n and AI agents, plus web development — from landing pages to web apps. A lead is processed in 1 minute instead of 20."
+  },
   "header": {
     "name": "Stanislav RAKITIANSKIY",
     "nav": {
@@ -71,6 +75,7 @@
     "copyright": "© {year} {name} · {role}"
   },
   "common": {
+    "skipToContent": "Skip to content",
     "themeToggle": {
       "toDark": "Switch to dark theme",
       "toLight": "Switch to light theme"

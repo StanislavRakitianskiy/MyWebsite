@@ -6,6 +6,7 @@ const definedEnv = Object.fromEntries(
 );
 
 const envSchema = z.object({
+  NEXT_PUBLIC_SITE_URL: z.string().url().default("https://example.com"),
   N8N_WEBHOOK_URL: z.string().url().optional(),
   N8N_WEBHOOK_SECRET: z.string().min(1).optional(),
   RESEND_API_KEY: z.string().min(1).optional(),
