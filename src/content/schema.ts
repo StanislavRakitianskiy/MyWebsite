@@ -19,6 +19,7 @@ export const projectSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   category: z.enum(["web", "automation"]),
   year: z.number().int().min(2020).max(2030),
+  href: z.string().url().optional(),
   /** Тип роботи в картці, напр. «E-commerce», «Веб-застосунок». */
   kind: localized,
   title: localizedText,
