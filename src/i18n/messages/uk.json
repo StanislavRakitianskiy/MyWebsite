@@ -24,7 +24,12 @@
     "categories": {
       "web": "Розробка сайтів",
       "automation": "Автоматизація n8n"
-    }
+    },
+    "stack": "Стек",
+    "showStack": "Показати стек проєкту «{title}»",
+    "hideStack": "Сховати стек проєкту «{title}»",
+    "showMore": "показати більше",
+    "showLess": "згорнути"
   },
   "about": {
     "title": "Про мене",

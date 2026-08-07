@@ -24,7 +24,12 @@
     "categories": {
       "web": "Website development",
       "automation": "n8n automation"
-    }
+    },
+    "stack": "Stack",
+    "showStack": "Show the “{title}” project stack",
+    "hideStack": "Hide the “{title}” project stack",
+    "showMore": "show more",
+    "showLess": "show less"
   },
   "about": {
     "title": "About me",
