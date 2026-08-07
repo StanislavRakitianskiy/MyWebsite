@@ -11,7 +11,7 @@ export const siteRaw = {
     uk: "Готовий до нового проєкту",
     en: "Available for a new project",
   },
-  email: "hello@example.com",
+  email: "raketaswig@gmail.com",
   socials: [
     {
       id: "github",
@@ -21,12 +21,12 @@ export const siteRaw = {
     {
       id: "linkedin",
       label: "LinkedIn",
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/in/станіслав-ракітянський-b055a0379",
     },
     {
       id: "telegram",
       label: "Telegram",
-      href: "https://t.me/",
+      href: "https://t.me/StanislavRakitianskyi",
     },
   ],
 } satisfies SiteInput;

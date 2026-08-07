@@ -13,7 +13,7 @@
   --accent: #121212;
   --accent-foreground: #f7f7f4;
   --ring: #121212;
-  --inverse-background: #141414;
+  --inverse-background: #0b0c0e;
   --inverse-foreground: #f5f5f3;
 }
 
@@ -27,8 +27,7 @@
   --accent: #ededf0;
   --accent-foreground: #0b0c0e;
   --ring: #ededf0;
-  /* «Про мене» лишається чорною в обох темах (правка від замовника) */
-  --inverse-background: #141414;
+  --inverse-background: #0b0c0e;
   --inverse-foreground: #f5f5f3;
 }
 
@@ -46,8 +45,8 @@
   --color-inverse-foreground: var(--inverse-foreground);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-manrope), var(--font-inter), ui-sans-serif,
-    system-ui, sans-serif;
+  --font-display:
+    var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --radius-sm: 0.375rem;
   --radius-md: 0.625rem;
@@ -74,7 +73,6 @@ html {
   animation: fade-up 0.6s ease-out both;
 }
 
-/* §10: поважаємо reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

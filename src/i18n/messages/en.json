@@ -15,13 +15,12 @@
   },
   "hero": {
     "heading": "A website brings clients. Automation turns them into deals.",
-    "subtitle": "I'm Stanislav. I set up business process automation with n8n and AI agents, and build websites — from landing pages to web apps. A lead is processed in 1 minute instead of 20, and your team gets dozens of hours back every month.",
+    "subtitle": "I'm Stanislav. I set up business process automation with n8n and AI agents, and build websites — from landing pages to web apps.",
     "ctaWorks": "View works",
     "ctaDiscuss": "Discuss a task"
   },
   "works": {
     "title": "Works",
-    "note": "Selected projects",
     "categories": {
       "web": "Website development",
       "automation": "n8n automation"

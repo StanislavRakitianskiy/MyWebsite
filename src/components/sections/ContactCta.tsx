@@ -13,7 +13,7 @@ export function ContactCta() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="scroll-mt-20 py-20 sm:py-28"
+      className="scroll-mt-20 py-20 sm:py-28 border-t border-border"
     >
       <Container className="flex flex-col items-center text-center">
         <Eyebrow>{t("eyebrow")}</Eyebrow>

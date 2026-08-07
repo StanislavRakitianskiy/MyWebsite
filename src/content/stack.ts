@@ -28,7 +28,7 @@ export const stackRaw = [
   },
   {
     title: { uk: "Деплой", en: "Deployment" },
-    items: ["Vercel"],
+    items: ["Vercel", "Docker"],
   },
   {
     title: { uk: "SEO", en: "SEO" },

@@ -25,7 +25,6 @@ export function Works() {
           >
             {t("title")}
           </h2>
-          <span className="text-sm text-muted-foreground">{t("note")}</span>
         </div>
         {categories.map((category) => (
           <div key={category} className="mt-14 sm:mt-16">

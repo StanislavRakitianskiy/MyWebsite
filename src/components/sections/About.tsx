@@ -13,7 +13,7 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="scroll-mt-20 bg-inverse-background py-16 text-inverse-foreground/75 sm:py-24"
+      className="scroll-mt-20 bg-inverse-background py-16 text-inverse-foreground/75 sm:py-24 border-t border-border"
     >
       <Container>
         <h2
