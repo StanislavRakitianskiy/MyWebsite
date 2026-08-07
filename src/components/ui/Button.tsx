@@ -28,7 +28,7 @@ function buttonClasses(
   { variant = "primary", size = "md" }: StyleProps,
   className = "",
 ) {
-  return `inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  return `inline-flex cursor-pointer items-center justify-center gap-2 rounded-full font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 }
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & StyleProps;

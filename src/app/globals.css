@@ -27,9 +27,9 @@
   --accent: #ededf0;
   --accent-foreground: #0b0c0e;
   --ring: #ededf0;
-  /* «Про мене» в темній темі інвертується у світлу — зберігає ритм сторінки */
-  --inverse-background: #f5f5f3;
-  --inverse-foreground: #141414;
+  /* «Про мене» лишається чорною в обох темах (правка від замовника) */
+  --inverse-background: #141414;
+  --inverse-foreground: #f5f5f3;
 }
 
 @theme inline {

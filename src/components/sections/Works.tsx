@@ -3,6 +3,7 @@ import { getProjects } from "@/content/api";
 import type { ProjectCategory } from "@/content/schema";
 import { ProjectRow } from "@/components/sections/ProjectRow";
 import { Container } from "@/components/ui/Container";
+import { GrowLine } from "@/components/ui/GrowLine";
 import { Reveal } from "@/components/ui/Reveal";
 
 const categories: readonly ProjectCategory[] = ["web", "automation"];
@@ -28,9 +29,10 @@ export function Works() {
         </div>
         {categories.map((category) => (
           <div key={category} className="mt-14 sm:mt-16">
-            <h3 className="border-b border-border pb-4 text-xl font-bold sm:text-2xl">
+            <h3 className="pb-4 text-xl font-bold sm:text-2xl">
               {t(`categories.${category}`)}
             </h3>
+            <GrowLine />
             <div className="divide-y divide-border">
               {getProjects(category).map((project) => (
                 <Reveal key={project.slug}>

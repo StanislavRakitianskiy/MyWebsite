@@ -24,7 +24,7 @@ export function LocaleSwitcher() {
             type="button"
             aria-pressed={isActive}
             onClick={() => router.replace(pathname, { locale: candidate })}
-            className={`rounded-full px-3 py-1 text-xs font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${
+            className={`cursor-pointer rounded-full px-3 py-1 text-xs font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${
               isActive
                 ? "bg-background text-foreground"
                 : "text-accent-foreground/70 hover:text-accent-foreground"

@@ -84,20 +84,20 @@ export function MobileNav() {
         <div
           id="mobile-menu"
           ref={panelRef}
-          className="absolute inset-x-0 top-full border-b border-border bg-background shadow-sm"
+          className="absolute inset-x-0 top-full z-40 h-[calc(100dvh-4rem)] overflow-y-auto bg-background"
         >
-          <Container className="flex flex-col gap-1 py-4">
+          <Container className="flex min-h-full flex-col gap-2 py-8">
             {navItems.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 text-lg font-medium transition-colors hover:bg-muted"
+                className="rounded-md px-2 py-4 text-2xl font-semibold transition-colors hover:bg-muted"
               >
                 {t(`nav.${item.key}`)}
               </a>
             ))}
-            <div className="mt-2 flex items-center gap-3 border-t border-border px-2 pt-4">
+            <div className="mt-auto flex items-center gap-3 border-t border-border px-2 pt-6">
               <ThemeToggle />
               <LocaleSwitcher />
             </div>

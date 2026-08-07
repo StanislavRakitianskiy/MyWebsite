@@ -13,7 +13,7 @@ export function Hero() {
         <p className="animate-fade-up text-sm text-muted-foreground sm:text-base">
           {site.tagline}
         </p>
-        <h1 className="animate-fade-up mt-4 max-w-5xl font-display text-[44px]/[1.04] font-bold tracking-tight sm:text-7xl/[1.02] lg:text-[96px]/[1.0] [animation-delay:60ms]">
+        <h1 className="animate-fade-up mt-4 max-w-5xl font-display text-[40px]/[1.04] font-bold tracking-tight min-[375px]:text-[44px]/[1.04] sm:text-7xl/[1.02] lg:text-[96px]/[1.0] [animation-delay:60ms]">
           {t("heading")}
         </h1>
         <p className="animate-fade-up mt-8 max-w-2xl text-lg text-muted-foreground sm:text-xl/relaxed [animation-delay:120ms]">
