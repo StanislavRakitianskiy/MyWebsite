@@ -19,6 +19,7 @@ src/proxy.ts         локалізаційний proxy (middleware)
 src/app/[locale]/    layout і сторінки
 src/components/      ThemeProvider, ThemeToggle, LocaleSwitcher
 src/components/ui/   Container, Button, Eyebrow, SectionHeading
+n8n/                 експорт n8n-workflow для кейсів портфоліо
 ```
 
 ## Команди
@@ -35,6 +36,13 @@ npm run lint    # eslint
 `POST /api/contact` — єдина динамічна точка: honeypot → Zod-валідація →
 Turnstile (опційно) → rate limit → n8n-вебхук → fallback-лист через Resend.
 Змінні оточення — у `.env.example`.
+
+## Кейси автоматизації
+
+`n8n/Instagram_Direct.json` — AI-консультант у Instagram Direct: вебхук Meta (верифікація + події),
+фільтр echo-повідомлень, агент з інструментами `Clothing` / `Delivery` / `Handoff`, відповідь через
+Instagram Graph API. Покрокове підключення (Meta app, ngrok, токени, діагностика) —
+`docs/instagram-direct-n8n.md`.
 
 ## CI та деплой
 
