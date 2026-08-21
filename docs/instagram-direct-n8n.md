@@ -145,8 +145,18 @@ Instagram → *API setup with Instagram login* → **Configure webhooks**:
 
 Далі:
 1. Підписатися на поле **`messages`** (за бажанням `messaging_postbacks`, `message_reactions`).
-2. У кроці 2 напроти акаунта перемкнути **Webhook Subscription** → **On** (на скріншоті було `Off` —
-   без цього події не йдуть).
+2. У кроці 2 напроти **бізнес-акаунта** перемкнути **Webhook Subscription** → **On**. Для тестового
+   акаунта-«клієнта» цей тумблер лишається `Off` — події приходять тому, хто отримує повідомлення.
+
+## 5.1 Застосунок мусить бути Live
+
+Блок Configure webhooks сам про це попереджає: *«To receive webhooks, your app must be in published
+state»*. У Development mode верифікація URL проходить, підписка на `messages` показує `Subscribed`,
+але **жодна подія не доставляється** — це найпідступніший стан, бо в дашборді все виглядає зеленим.
+
+Перехід: **App Settings → Basic** заповнити Privacy Policy URL, іконку 1024×1024 і категорію, потім
+тумблер **Development → Live** вгорі панелі. Privacy Policy можна покласти окремою сторінкою на
+власний сайт.
 
 ## 6. Тест
 
@@ -163,6 +173,8 @@ Instagram → *API setup with Instagram login* → **Configure webhooks**:
 |---|---|---|
 | Meta: *The URL couldn't be validated*, в інспекторі ngrok `403 Forbidden` | verify token не збігається (часто туди вставляють access token) | звірити рядок у ноді `Token Valid?` з полем у Meta |
 | Meta: *The URL couldn't be validated*, в інспекторі `404 … is not registered` | воркфлоу не активований або в Meta вказано test-URL | активувати воркфлоу, у Callback URL прибрати `-test` |
+| Верифікація ок, `messages` = Subscribed, але в інспекторі ngrok **нема запитів від Meta** | застосунок у Development mode; вимкнено *Allow access to messages* | крок 5.1 і крок 3 — обидва обов'язкові |
+| Подій немає, повідомлення лежить у теці **Requests** в Instagram | клієнт не підписаний на бізнес-акаунт, діалог ще не прийнятий | підписатись тестовим акаунтом або прийняти запит в інбоксі й написати ще раз |
 | Верифікація ок, але подій немає | вимкнено *Allow access to messages*; не підписано поле `messages`; `Webhook Subscription` = Off | пройти кроки 3 і 5 |
 | Executions є, клієнт нічого не отримує | протермінований токен, немає `instagram_business_manage_messages`, вихід за 24-годинне вікно | відкрити відповідь ноди `Send IG Reply` — Meta пише причину в `error.message` |
 | `OAuthException` code `190` | токен недійсний/відкликаний | згенерувати новий токен, оновити credential |
