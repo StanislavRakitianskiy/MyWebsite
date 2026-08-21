@@ -129,6 +129,17 @@ Instagram → *API setup with Instagram login* → **Configure webhooks**:
 | Callback URL | `https://your-name.ngrok-free.app/webhook/instagram` |
 | Verify token | той самий рядок, що в ноді `Token Valid?` |
 
+> **Не переплутай два секрети** — це найпоширеніша помилка на цьому кроці.
+>
+> | | Verify token | Access token (`IGAA…`) |
+> |---|---|---|
+> | Хто придумує | **ти сам**, довільний рядок | Meta видає кнопкою *Generate token* |
+> | Для чого | Meta один раз доводить, що URL твій | підпис кожного запиту на **відправку** повідомлення |
+> | Де живе | поле «Verify token» у Meta **+** нода `Token Valid?` | credential **Header Auth**: `Authorization` = `Bearer IGAA…` |
+>
+> Якщо вставити `IGAA…` у поле «Verify token», n8n відповість `403 Forbidden`, а Meta покаже
+> «The callback URL or verify token couldn't be validated».
+
 **Verify and save** → Meta робить GET з `hub.mode`, `hub.verify_token`, `hub.challenge`, n8n
 повертає `hub.challenge` тілом відповіді з кодом 200.
 
@@ -150,7 +161,8 @@ Instagram → *API setup with Instagram login* → **Configure webhooks**:
 
 | Симптом | Причина | Рішення |
 |---|---|---|
-| Meta: *The URL couldn't be validated* | workflow не активний, вказано test URL, ngrok не запущений, verify token не збігається | активувати workflow; production URL; звірити токен символ у символ |
+| Meta: *The URL couldn't be validated*, в інспекторі ngrok `403 Forbidden` | verify token не збігається (часто туди вставляють access token) | звірити рядок у ноді `Token Valid?` з полем у Meta |
+| Meta: *The URL couldn't be validated*, в інспекторі `404 … is not registered` | воркфлоу не активований або в Meta вказано test-URL | активувати воркфлоу, у Callback URL прибрати `-test` |
 | Верифікація ок, але подій немає | вимкнено *Allow access to messages*; не підписано поле `messages`; `Webhook Subscription` = Off | пройти кроки 3 і 5 |
 | Executions є, клієнт нічого не отримує | протермінований токен, немає `instagram_business_manage_messages`, вихід за 24-годинне вікно | відкрити відповідь ноди `Send IG Reply` — Meta пише причину в `error.message` |
 | `OAuthException` code `190` | токен недійсний/відкликаний | згенерувати новий токен, оновити credential |
@@ -161,6 +173,14 @@ Instagram → *API setup with Instagram login* → **Configure webhooks**:
 
 Корисне для розбору: `docker compose logs -f n8n`, веб-інспектор ngrok на `http://127.0.0.1:4040`
 (видно кожен запит Meta і що саме відповів n8n).
+
+## Кнопка «Test» у дашборді Meta
+
+Meta надсилає власний тестовий payload у форматі `entry[].changes[]` з `field: "messages"`, тоді як
+реальні повідомлення Instagram Direct приходять як `entry[].messaging[]`. `Parse IG Event` розуміє
+обидві форми, тож кнопкою можна перевірити ланцюг до агента, не чекаючи живого клієнта. Остання
+нода `Send IG Reply` при цьому впаде — у тестовому payload `sender.id` вигаданий (`12334`), і Meta
+не знаходить такого користувача. Це нормально: усе до неї вже підтверджено.
 
 ## Обмеження тестового формату
 
